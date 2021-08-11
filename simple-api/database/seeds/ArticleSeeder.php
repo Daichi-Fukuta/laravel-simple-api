@@ -15,7 +15,7 @@ class ArticleSeeder extends Seeder
     {
         for($i = 1; $i < 4; $i++) {
             DB::table('articles')->insert([
-                'author' => '著者' . $i,
+                'author_id' => 1,
                 'title' => 'タイトル' . $i,
                 'body' => '記事の内容' . $i,
                 'created_at' => Carbon::now(),

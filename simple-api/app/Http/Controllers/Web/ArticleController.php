@@ -7,8 +7,9 @@ use App\Article;
 
 class ArticleController extends Controller
 {
-    public function index() {
-        $articles = Article::all();
+    public function index()
+    {
+        $articles = Article::with('author')->get();
         return view('Article.index', ['articles' => $articles]);
     }
 }
