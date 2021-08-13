@@ -15,6 +15,14 @@ services:
       - .:/var/www/html
     depends_on:
       - mysql
+  vue: 
+    build: ./docker/vue
+    ports:
+      - 8080:8080
+    volumes:
+     - .:/var/www/html
+    stdin_open: true
+    tty: true
   mysql:
     image: mysql:5.7
     environment:
